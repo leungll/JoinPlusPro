@@ -1,0 +1,115 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+
+div[class^="block_1"]{
+	width:761px;
+	height:270px;
+	margin: 0 auto;
+	
+}
+.title{
+	height:32px;
+	width:761px;
+	line-height: 32px;
+	font-size: 20px;
+	font-weight: 800;
+	padding-left: 60px;
+	margin-top: 20px;
+	background-color: rgb(242, 242, 242);
+	box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 5px 0px;
+}
+.text_pic{
+	padding: 40px 40px;
+}
+.text_pic1{
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+.pic{
+	display: inline-block;
+	padding-right: 45px;
+}
+#pic01{
+	padding-left: 40px;
+}
+#pic02{
+	padding-left: 30px;
+}
+#pic2{
+	padding-left: 30px;
+}
+.text{
+	display: inline-block;
+	width: 380px;
+}
+#text2{
+	padding-left: 80px;
+}
+#pic2{
+	padding-left: 65px;
+}
+#text01{
+	padding-left: 40px;
+}
+#text02{
+	padding-left: 60px;
+	padding-right: 10px;
+}
+#text2{
+	width:350px;
+}
+.block_2{
+	height:360px;
+	width:761px;
+	margin: 0 auto;
+}
+#pic03{
+	padding-left: 40px;
+}
+#pic03 img{
+	margin-top: 20px;
+	width:210px;
+	height: 210px;
+}
+#pic03 img:hover{
+	transform: scale(1.5,1.5);
+	transition: 1s;	
+}
+#text03{
+	width:230px;
+}
+#text03{
+	font-family: "Arial Cursiva", "Arial Normal", "Arial";
+	font-size: 30px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 72px;
+	padding-left: 80px;
+	position: absolute;
+	top:910px;
+}
+
+
+
+.member{
+	width: 761px;
+	margin: 0 auto;
+}
+.leagure{
+	padding: 40px;
+	
+}
+.league img{
+	width:;
+	height:;
+	
+}
+table tr td:first-child{
+	width:330px;
+}
+table tr{
+	padding-bottom: 30px;
+}

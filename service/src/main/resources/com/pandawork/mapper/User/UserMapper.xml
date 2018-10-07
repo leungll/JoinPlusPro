@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.User.UserMapper">
+    <resultMap id="User" type="com.pandawork.common.entity.User.User">
+        <id property="id" column="id"/>
+        <result property="userName" column="member_name"/>
+        <result property="userPassword" column="member_password"/>
+        <result property="userDepartment" column="member_department"/>
+        <result property="userNumber" column="member_number"/>
+        <result property="userGrade" column="member_grade"/>
+        <result property="userJob" column="member_job"/>
+        <result property="userIntroduction" column="member_introduction"/>
+        <result property="userImage" column="member_image"/>
+        <result property="userPower" column="member_power"/>
+    </resultMap>
+    <!--查询所有用户-->
+    <select id="listAllUser" resultMap="User">
+        SELECT * FROM `t_member_out`
+    </select>
+
+    <!--&lt;!&ndash;展示各部门成员&ndash;&gt;-->
+    <!--<select id="showAllMember" resultMap="User">-->
+    <!--SELECT * FROM `t_member_out`-->
+    <!--</select>-->
+
+    <!--展示产品部成员-->
+    <select id="showAllMember1" resultMap="User">
+        SELECT * FROM `t_member_out` WHERE `member_department` LIKE '%产品部%'
+    </select>
+
+    <!--展示前端部成员-->
+    <select id="showAllMember2" resultMap="User">
+        SELECT * FROM `t_member_out` WHERE `member_department` LIKE '%前端部%'
+    </select>
+
+    <!--展示后端部成员-->
+    <select id="showAllMember3" resultMap="User">
+        SELECT * FROM `t_member_out` WHERE `member_department` LIKE '%后端部%'
+    </select>
+
+    <!--增加用户 -->
+    <insert id="addUser" >
+        INSERT INTO `t_member_out`
+        (`id`,`member_name`,`member_department`,`member_number`,`member_grade`,
+        `member_job`,`member_introduction`,`member_image`,`member_password`,`member_power`)
+        VALUES (#{user.id},#{user.userName},#{user.userDepartment},
+        #{user.userNumber},#{user.userGrade},#{user.userJob},
+        #{user.userIntroduction},#{user.userImage},#{user.userPassword},#{user.userPower})
+    </insert>
+
+    <!--根据id删除用户-->
+    <delete id="delUser">
+        DELETE FROM `t_member_out`
+        WHERE `id`=#{id}
+    </delete>
+
+    <!--修改用户-->
+    <update id="updateUser">
+        UPDATE `t_member_out`SET
+        `member_name`=#{user.userName},
+        `member_department`=#{user.userDepartment},
+        `member_number`=#{user.userNumber},
+        `member_grade`=#{user.userGrade},
+        `member_job`=#{user.userJob},
+        `member_introduction`=#{user.userIntroduction},
+        `member_image`=#{user.userImage},
+        `member_password`=#{user.userPassword}
+        WHERE `id`=#{user.id}
+    </update>
+
+    <!--查询用户（根据用户名）-->
+    <select id="serUser" resultMap="User">
+        SELECT * FROM `t_member_out`
+        WHERE`member_name`=#{userName}
+    </select>
+
+
+    <!--查询用户（根据密码）-->
+    <select id="pswIsTrue" resultMap="User">
+        SELECT * FROM `t_member_out`
+        WHERE`member_name`=#{userName}and`member_password`=#{userPassword}
+    </select>
+
+    <!--上传头像-->
+    <update id="addImages">
+        UPDATE `t_member_out`
+        SET `member_image`=#{images}
+        WHERE `member_name`=#{userName}
+    </update>
+</mapper>

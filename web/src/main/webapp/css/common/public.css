@@ -1,0 +1,157 @@
+@charset "utf-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+.header{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 133px;
+	width:1300px;
+	margin: 0 auto;
+	position: relative;
+}
+#network{
+	height:40px;
+	width: 140px;
+	text-align: center;
+	background-color: orange;
+	line-height: 40px;
+	border-radius: 6px;
+	margin-right: 40px;
+	border:none;
+	color: white;
+}
+.search_bar{
+	border:1px solid cadetblue;
+}
+#key{
+	height:38px;
+	width: 180px;
+}
+#search{
+	height:40px;
+	width: 75px;
+	background-color: orange;
+	border:none;	
+	color: white;
+}
+.button{
+	position: absolute;
+	right:40px;
+	top:70px;
+}
+.button_inner{
+	float: left;
+}
+.search_bar_inner{
+	float: left;
+}
+
+
+
+
+
+.nav{
+	height:50px;
+	width: 100%;
+	background-color: #0d6db9;
+	margin: 0 auto;
+}
+#home_page{
+	padding-left: 25%;
+}
+.nav li{
+	float:left;
+	text-align: center;
+	height:50px;
+	width:150px;
+	line-height:50px;
+	font-size:16px;
+	position:relative;
+	list-style-type: none;
+}
+.nav li a{
+	color:#FFF;
+	display:block;
+	padding: 0 21.5px;
+	text-decoration: none;
+}
+.nav ul li a:hover{
+	display:block;
+	color: #fff;
+	background:#0a5894;
+}
+.nav dl{
+	font-size:14px;
+	background:#0a5894;
+	position:absolute;
+	top:50px;
+	left:0px;
+	z-index: 9999;
+	width: 100%;
+}
+.nav dl dd a{
+	color:#fff; 
+	padding: 8px 0; 
+	line-height: 22px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+.nav dl dd a:hover{
+	color:#fff;
+	background:#0D6DB9;
+}
+.mainmenu{
+	overflow: hidden;
+}
+.mainmenu:hover{
+	overflow: visible;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+.footer_block{
+	height:220px;
+	width:100%;
+	background-color: #0d6db9;
+	margin: 0 auto;
+	/*position: absolute;
+	bottom:0;*/
+}
+.footer{
+	float:left;
+}
+.footer_middle p span{
+	color: white;
+	line-height: 45px;
+}
+#footer_logo{
+	margin-left: 13%;
+	margin-top: 45px;
+}
+#footer_message{
+	margin-left: 200px;
+	margin-top: 40px;
+}
+#footer_wechat{
+	margin-left: 200px;
+	margin-top:20px;
+}
+.note p span{
+	color: white;
+	width:142px;
+	line-height: normal;
+	font-family: "楷体";
+	font-weight: 200;
+	text-align: center;
+}
