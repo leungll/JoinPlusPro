@@ -26,6 +26,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/user")
 public class UserController extends AbstractController {
+    
+    int tempId=0;
 
     @Autowired
     UserService userService;
@@ -124,7 +126,8 @@ public class UserController extends AbstractController {
 
     //修改跳转页面
     @RequestMapping(value = "/toUpdate",method = RequestMethod.GET)
-    public String toUpdate(){
+    public String toUpdate(int id){
+        tempId=id;
         return "manager/User/DMupdate";
     }
 
