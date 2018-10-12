@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* CSS Document */
+/*中间内容部分的div*/
+#mainBox{
+    background-color: #FFFFFF;
+    width: 65%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+/*上方阴影条*/
+#shadowBox{
+    width: 98%;
+    height: 20px;
+    background-color:#F2F2F2;
+    box-shadow: 2px 2px 3px ;
+}
+/*标题和文字内容*/
+h3{
+    font-size: 25px;
+}
+#span{
+    font-size: 20px;
+}
+/*内容文字部分*/
+.p{
+    width: 70%;
+    margin: 10px auto;
+}
+/*蓝色框里的报名流程和开始报名*/
+.flowLeft{
+    margin: 30px 0 30px 15%;
+    width: 20%;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #599CCC;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+.flowRight{
+    margin: 30px 0 30px 70%;
+    width: 20%;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #599CCC;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+/*使用ID修改信息部分*/
+#IDinput{
+    display: none;
+}
+/*表单的提交按钮*/
+#submit_button{
+    float: right;
+    margin: 30px 0 30px 30px;
+    width: 25%;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    color: #599CCC;
+    background-color: #FFFFFF;
+    text-align: center;
+    border-radius: 8px;
+    border: #599CCC 1px solid;
+}
+/*表单的提交按钮触碰动画*/
+#submit_button:hover{
+    background-color: #599CCC;
+    color: #FFFFFF;
+}
+/*表单*/
+input{
+    overflow: hidden;
+}
+form{
+    display: none;
+}
+#mianForm{
+    width: 80%;
+    margin: 0 auto 100px;
+    padding: 20px 10px;
+    display: none;
+}
+/*表格*/
+table{
+    border-collapse: collapse;/*单边框*/
+    width: 100%;
+    box-shadow: 5px 5px 5px #888888;
+    table-layout: fixed;
+}
+td{
+    border: #000000 solid 1px;
+    width:12%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+.miaomiaomiao{
+    display: none;
+}
+/*输入框透明背景*/
+.fullinput{
+    background-color: inherit;
+    border: hidden;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.smallinput{
+    background-color: inherit;
+    border: hidden;
+    text-align: center;
+    width: 40%;
+}
+.mininput{
+    background-color: inherit;
+    border: hidden;
+    text-align: center;
+    width: 30%;
+}
+.maxinput{
+    background-color: inherit;
+    border: hidden;
+    text-align: center;
+    width: 100%; /*自动适应父布局宽度*/
+    height: 200px;
+    overflow: auto;
+    word-break: break-all;
+    border: hidden;
+    resize: none;
+}
+#mask{
+    background-color: #000000;
+    opacity: 0.75;
+    filter: opacity(75);
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000
+}
+#popup{
+    position: fixed;
+    z-index: 1001;
+    background-color: #599CCC;
+    padding: 20px 50px;
+    border-radius: 10px;
+}

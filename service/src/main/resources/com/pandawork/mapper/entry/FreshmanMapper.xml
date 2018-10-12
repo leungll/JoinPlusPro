@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.entry.FreshmanMapper">
+
+    <resultMap id="Freshman" type="com.pandawork.common.entity.entry.Freshman" >
+        <id property="id" column="id"/>
+        <result property="name" column="entry_name"/>
+        <result property="sex" column="entry_sex"/>
+        <result property="number" column="entry_number"/>
+        <result property="photo" column="entry_photo"/>
+        <result property="nation" column="entry_nation"/>
+        <result property="nativePlace" column="entry_nativePlace"/>
+        <result property="rank" column="entry_rank"/>
+        <result property="rankAll" column="entry_rankAll"/>
+        <result property="major" column="entry_major"/>
+        <result property="volunteer1" column="entry_volunteer_1"/>
+        <result property="volunteer2" column="entry_volunteer_2"/>
+        <result property="qq" column="entry_qq"/>
+        <result property="phone" column="entry_phone"/>
+        <result property="introduction" column="entry_introduction"/>
+        <result property="reason" column="entry_reason"/>
+        <result property="yon" column="entry_yon"/>
+        <result property="pass" column="entry_pass"/>
+    </resultMap>
+
+    <select id="listAllFreshman" resultMap="Freshman">
+        SELECT * FROM t_entry_out
+    </select>
+
+    <insert id="addFreshman">
+        INSERT INTO t_entry_out
+        (entry_name,entry_sex,entry_number,entry_photo,entry_nation,
+        entry_nativePlace,entry_rank,entry_rankAll,entry_major,entry_volunteer_1,
+        entry_volunteer_2,entry_qq,entry_phone,entry_introduction,entry_reason,
+        entry_yon,entry_pass)
+        VALUES
+        (#{Freshman.name},#{Freshman.sex},#{Freshman.number},#{Freshman.photo},#{Freshman.nation},
+        #{Freshman.nativePlace},#{Freshman.rank},#{Freshman.rankAll},#{Freshman.major},#{Freshman.volunteer1},
+        #{Freshman.volunteer2},#{Freshman.qq},#{Freshman.phone},#{Freshman.introduction},#{Freshman.reason},
+        #{Freshman.yon},#{Freshman.pass})
+    </insert>
+
+    <insert id="photo">
+        INSERT INTO t_entry_out
+        photo VALUES #{photo}
+    </insert>
+
+    <delete id="deleteFreshman">
+        DELETE FROM t_entry_out
+        WHERE id=#{id}
+    </delete>
+
+    <update id="updateFreshman">
+        UPDATE t_entry_out
+        SET entry_name=#{Freshman.name},entry_sex=#{Freshman.sex},entry_number=#{Freshman.number},entry_photo=#{Freshman.photo},entry_nation=#{Freshman.nation},
+        entry_nativePlace=#{Freshman.nativePlace},entry_rank=#{Freshman.rank},entry_rankAll=#{Freshman.rankAll},entry_major=#{Freshman.major},entry_volunteer_1=#{Freshman.volunteer1},
+        entry_volunteer_2=#{Freshman.volunteer2},entry_qq=#{Freshman.qq},entry_phone=#{Freshman.phone},entry_introduction=#{Freshman.introduction},entry_reason=#{Freshman.reason},
+        entry_yon=#{Freshman.yon},entry_pass=#{Freshman.pass}
+        WHERE id=#{Freshman.id}
+    </update>
+
+    <select id="searchVolunteer1" resultMap="Freshman" >
+        SELECT *
+        FROM t_entry_out
+        WHERE entry_volunteer_1=#{key1}
+    </select>
+
+    <select id="searchVolunteer2" resultMap="Freshman" >
+        SELECT *
+        FROM t_entry_out
+        WHERE entry_volunteer_2=#{key2}
+    </select>
+
+    <select id="searchPass" resultMap="Freshman" >
+        SELECT *
+        FROM t_entry_out
+        WHERE entry_pass=#{pass}
+    </select>
+
+    <select id="getFreshman" resultMap="Freshman">
+        SELECT *
+        FROM t_entry_out
+        WHERE id=#{id}
+    </select>
+
+    <select id="getIdByNumber" resultMap="Freshman">
+        SELECT *
+        FROM t_entry_out
+        WHERE entry_number=#{number}
+    </select>
+</mapper>

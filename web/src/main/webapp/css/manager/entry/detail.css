@@ -1,0 +1,48 @@
+#sidebar ul li:nth-child(9) a{
+    background-color: rgb(78,84,101);
+}
+#detail_table_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#detail_table_title span{
+    font-size: 20px;
+}
+#detail_table{
+    width: 800px;
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+}
+#detail_table tr th,td{
+    text-align: center;
+    border: 1px solid rgb(226,226,226);
+}
+#detail_table table tr:nth-child(5){
+    height: 300px;
+}
+#detail_table table tr:nth-child(6){
+    height: 300px;
+}
+#back{
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#back:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}

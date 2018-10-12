@@ -1,0 +1,92 @@
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+#registration_form_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#registration_form_title span{
+    font-size: 20px;
+}
+#sidebar ul li:nth-child(9) a{
+    background-color: rgb(78,84,101);
+}
+#registration{
+    width: 100%;
+    margin-top:1%;
+}
+#research{
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+#research button{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#research form button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+#regi_table{
+    width: 1070px;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+#regi_table tr{
+    transition: all 0.5s;
+}
+#regi_table tr th,td{
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid rgb(226,226,226);
+}
+#regi_table tr td{
+    position: relative;
+    height: 85px;
+}
+#regi_table button{
+    width: 60px;
+    height: 30px;
+    margin-bottom: 3.5px;
+    margin-top: 3.5px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#regi_table button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+.status{
+    display: inline-block;
+    width: 50px;
+}
+.department{
+    width: 90px;
+    height: 105px;
+    position: absolute;
+    top: -15%;
+    left: 69%;
+}
+form{
+    display: inline-block;
+}
