@@ -38,7 +38,7 @@
                 <input type="text" name="number" id="number" class="fullinput">
             </td>
             <td colspan="2" rowspan="5" width="25%">
-                <img src="" alt="" id="img" width="100%">
+                <img id="img" width="100%">
                 <input type="file" name="uploadFile" id="file" multiple="multiple">
             </td>
         </tr>
