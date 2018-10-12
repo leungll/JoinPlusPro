@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.lunbo.LunboMapper">
+
+    <resultMap id="lunbo" type="com.pandawork.common.entity.lunbo.Lunbo" >
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="path" column="path"/>
+        <result property="status" column="status"/>
+    </resultMap>
+
+    <select id="listAllLunbo" resultMap="lunbo">
+        SELECT *
+        FROM `t_lunbo_out`
+    </select>
+
+    <insert id="addLunbo">
+        INSERT INTO `t_lunbo_out`
+        (`name`,`path`)
+        VALUES (#{lunbo.name}, #{lunbo.path})
+    </insert>
+
+    <delete id="delLunbo">
+        DELETE FROM `t_lunbo_out`
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateLunbo">
+        UPDATE `t_lunbo_out`
+        SET `name` = #{lunbo.name},
+            `path` = #{lunbo.path},
+            `status` = #{lunbo.status}
+        WHERE `id` = #{lunbo.id}
+    </update>
+
+    <select id="selectById" resultMap="lunbo" >
+        SELECT *
+        FROM `t_lunbo_out`
+        WHERE `id` = #{id}
+    </select>
+</mapper>

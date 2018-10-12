@@ -1,0 +1,106 @@
+a:hover{
+    text-decoration: none;
+}
+button a{
+    color: white;
+}
+#activities{
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+#actiImg_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#actiImg_title span{
+    font-size: 20px;
+}
+#sidebar ul li:nth-child(8) a{
+    background-color: rgb(78,84,101);
+}
+#activitiesImg tr{
+    transition: all 0.5s;
+}
+#activitiesImg tr th{
+    font-size: 120%;
+}
+#activitiesImg tr th,td{
+    text-align: center;
+    border: 1px solid rgb(226,226,226);
+}
+#activitiesImg tr td:first-child{
+    width: 250px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    color: black;
+    font-size: 140%;
+}
+#activitiesImg tr td:nth-child(2){
+    width: 300px;
+    height: 250px;
+}
+#activitiesImg tr td:nth-child(3){
+    width: 200px;
+    font-size: 140%;
+}
+#activitiesImg tr td:nth-child(4){
+    width: 150px;
+    font-size: 140%;
+}
+#activitiesImg tr td:last-child{
+    width: 100px;
+    font-size: 140%;
+}
+#activitiesImg tr td button{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#activitiesImg tr td button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+#tool{
+    position: absolute;
+    bottom: 0%;
+}
+#file_through{
+    display: none;
+}
+#tool button{
+    width: 130px;
+    height: 30px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#through{
+    margin-right: 10px;
+}
+#tool button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+#tool input{
+    width: 300px;
+    height: 30px;
+    border: 0.4px solid gray;
+    border-radius: 6px;
+    text-indent: 5px;
+}
