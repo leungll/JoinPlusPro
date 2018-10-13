@@ -15,7 +15,7 @@ table td:nth-child(1) img{
 	width: 200px;
 	height: 200px;
 }
-table td:nth-child(4) img{
+table td:nth-child(5) img{
 	width: 30px;
 	height: 30px;
 	opacity: 0.5;
@@ -28,10 +28,13 @@ table td:nth-child(2){
     width: 250px;
 }
 table td:nth-child(3){
-    width: 150px;
+    width: 130px;
 }
 table td:nth-child(4){
-    width: 250px;
+    width: 100px;
+}
+table td:nth-child(5){
+	width: 250px;
 }
 table th{
 	height: 50px;
@@ -79,9 +82,13 @@ table td{
 }
 .submitcheck{
 	height: 40px;
-	width: 80px;
+	width: 65px;
 	border-radius: 40px;
 	border: 1px solid #000000;
 	color: white;
 	background-color: black;
+}
+.choice{
+	width: 20px;
+	height: 20px;
 }

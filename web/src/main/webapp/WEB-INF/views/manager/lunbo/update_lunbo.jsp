@@ -65,7 +65,7 @@
             <tr>
                 <th>图片</th>
                 <th>名称</th>
-                <th>选中</th>
+                <th>状态</th>
                 <th>操作</th>
             </tr>
             <tr>
@@ -77,11 +77,9 @@
                     <input type="text" name="name" id="change" value="${lunbo.name}"/>
                 </td>
                 <td>
-                    <input type="checkbox" class="choice" name="choose" />
-                    <input type="hidden" name="status" class="hidden" value="0" />
+                        <input type="text" name="status" value="${lunbo.status}" id="status" disabled="disabled"/>
                 </td>
                 <td>
-                    <span id="status">${lunbo.status}</span>
                     <input type="submit" name="submit" value="修改" id="besure" />
                     <a href="/lunbo/list"><button>取消</button></a>
                 </td>

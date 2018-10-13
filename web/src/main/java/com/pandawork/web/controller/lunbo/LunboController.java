@@ -16,7 +16,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -63,7 +65,10 @@ public class LunboController extends AbstractController {
 
     @RequestMapping("/add")
     public String addLunbo(Lunbo lunbo, HttpSession session, MultipartFile uploadFile, Model model) throws SSException {
-        String filename = uploadFile.getOriginalFilename();
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
+        String date1 = sdf.format(date);
+        String filename = date1 + uploadFile.getOriginalFilename();
         String leftPath = session.getServletContext().getRealPath("images");
         File file = new File(leftPath,filename);
         lunbo.setPath("/images/" + filename);
@@ -106,22 +111,11 @@ public class LunboController extends AbstractController {
     }
 
     @RequestMapping(value = "/update/{id}",method = RequestMethod.POST)
-    public String update(Lunbo lunbo , @PathVariable("id")int id, Model model, @RequestParam("status") String status){
+    public String update(Lunbo lunbo , @PathVariable("id")int id, Model model){
         try{
             lunbo.setId(id);
-            String stt = new String();
-            System.out.println(status);
-            if(status.equals("1")){
-                stt = "Yes";
-            }else if (status.equals("0")){
-                stt = "No";
-            }else{
-                stt = "不是0和1";
-            }
-            lunbo.setId(id);
-            lunbo.setStatus(stt);
-            model.addAttribute("lunbo",lunbo);
             lunboService.updateLunbo(lunbo);
+            model.addAttribute("lunbo",lunbo);
             return "redirect:/lunbo/list";
         }catch(SSException e){
             LogClerk.errLog.error(e);

@@ -4,6 +4,9 @@ a{
 a:hover{
     text-decoration: none;
 }
+#sidebar ul li:nth-child(8) a{
+    background-color: rgb(78,84,101);
+}
 #change_title{
     width: 700px;
     border-bottom: 1px solid;
@@ -16,12 +19,12 @@ a:hover{
 }
 #load_table{
     position: relative;
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
     margin-top: 4%;
 }
 #simgle_photo tr th{
-    font-size: 120%;
+    font-size: 150%;
 }
 #simgle_photo tr th,td{
     border: 1px solid rgb(226,226,226);
@@ -56,7 +59,10 @@ a:hover{
     border: 1px solid rgb(74,80,80);
     background-color: rgb(74,80,80);
 }
-.choice{
-    width: 20px;
-    height: 20px;
+#status{
+    border: 1px solid white;
+    font-size: 140%;
+    text-align: center;
+    background-color: white;
+    color: black;
 }

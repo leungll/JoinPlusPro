@@ -62,6 +62,7 @@
             <tr>
                 <th>标题</th>
                 <th>图片</th>
+                <th>是否选中</th>
                 <th>状态</th>
                 <th>操作</th>
             </tr>
@@ -73,11 +74,13 @@
                         <form action="${website}beauty/update2/${beauty.id}" method="post" enctype="multipart/form-data">
                             <input type="text" name="name" value="${beauty.name}" hidden/>
                             <input type="text" name="path" value="${beauty.path}" hidden/>
-                            <span class="status">${beauty.status}</span>
-                            <input type="checkbox" class="choice" name="choose" />
+                            <input type="checkbox" class="choice" name="choose" title="如要选中请点击该复选框，并点击确定按钮" />
                             <input type="hidden" name="status" class="hidden" value="0" />
                             <button type="submit">确定</button>
                         </form>
+                    </td>
+                    <td>
+                        <span class="status">${beauty.status}</span>
                     </td>
                     <td>
                         <a href="${website}beauty/toUpdate/${beauty.id}"><button type="submit"  value="修改">修改</button></a>
@@ -85,13 +88,14 @@
                     </td>
                 </tr>
             </c:forEach>
+
         </table>
         <div id="tool">
             <form action="/beauty/add" method="post" enctype="multipart/form-data">
-            <button id="through">浏览图片</button>
-            <input type="file" name="uploadFile" id="file_through" /><!-- 被隐藏 -->
-            <input type="text" name="name" id="photo_title" placeholder="请输入图片标题" />
-            <button type="submit" name="photo_submit" id="photo_submit">确认上传</button>
+                <button id="through">浏览图片</button>
+                <input type="file" name="uploadFile" id="file_through" /><!-- 被隐藏 -->
+                <input type="text" name="name" id="photo_title" placeholder="请输入图片标题" />
+                <button type="submit" name="photo_submit" id="photo_submit">确认上传</button>
             </form>
         </div>
 </div>

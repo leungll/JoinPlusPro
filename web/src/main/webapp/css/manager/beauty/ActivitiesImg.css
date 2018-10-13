@@ -6,9 +6,9 @@ button a{
 }
 #activities{
     position: relative;
-    width: 900px;
+    width: 1000px;
     margin: 0 auto;
-    padding-bottom: 5%;
+    padding-bottom: 6%;
 }
 #actiImg_title{
     width: 700px;
@@ -27,7 +27,7 @@ button a{
     transition: all 0.5s;
 }
 #activitiesImg tr th{
-    font-size: 120%;
+    font-size: 140%;
 }
 #activitiesImg tr th,td{
     text-align: center;
@@ -74,7 +74,8 @@ button a{
 }
 #tool{
     position: absolute;
-    bottom: 0%;
+    right: 10%;
+    bottom: 0.8%;
 }
 #file_through{
     display: none;
@@ -103,4 +104,10 @@ button a{
     border: 0.4px solid gray;
     border-radius: 6px;
     text-indent: 5px;
+}
+.choice{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 55%;
 }

@@ -66,7 +66,7 @@ public class BeautyController extends AbstractController {
     @RequestMapping("/add")
     public String addBeauty(Beauty beauty, HttpSession session, MultipartFile uploadFile) throws SSException {
         Date date = new Date();
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddhhmmss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
         String date1 = sdf.format(date);
         String filename = date1 + uploadFile.getOriginalFilename();
         String leftPath = session.getServletContext().getRealPath("images");
@@ -110,23 +110,12 @@ public class BeautyController extends AbstractController {
     }
 
     @RequestMapping(value = "/update/{id}",method = RequestMethod.POST)
-    public String update(Beauty beauty , @PathVariable("id")int id, Model model, @RequestParam("status") String status){
+    public String update(Beauty beauty , @PathVariable("id")int id, Model model){
         try{
             if(Assert.isNull(beauty)){
                 return null;
             }
             beauty.setId(id);
-            String stt = new String();
-            System.out.println(status);
-            if(status.equals("1")){
-                stt = "Yes";
-            }else if (status.equals("0")){
-                stt = "No";
-            }else{
-                stt = "不是0和1";
-            }
-            beauty.setId(id);
-            beauty.setStatus(stt);
             beautyService.updateBeauty(beauty);
             model.addAttribute("beauty",beauty);
             return "redirect:/beauty/list";

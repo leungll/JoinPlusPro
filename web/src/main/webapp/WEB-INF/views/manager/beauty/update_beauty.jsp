@@ -63,7 +63,7 @@
             <tr>
                 <th>标题</th>
                 <th>图片</th>
-                <th>选中</th>
+                <th>状态</th>
                 <th>操作</th>
             </tr>
             <tr>
@@ -75,11 +75,9 @@
                     <input type="text" name="path" value="${beauty.path}" hidden/>
                 </td>
                 <td>
-                    <input type="checkbox" class="choice" name="choose" />
-                    <input type="hidden" name="status" class="hidden" value="0" />
+                    <input type="text" name="status" value="${beauty.status}" id="status" disabled="disabled"/>
                 </td>
                 <td>
-                    <span id="status">${beauty.status}</span>
                     <button type="submit">确认</button>
                     <a href="/beauty/list"><button type="button">取消</button></a>
                 </td>

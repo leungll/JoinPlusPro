@@ -65,6 +65,7 @@
             <tr>
                 <th>图片</th>
                 <th>名称</th>
+                <th>是否选中</th>
                 <th>状态</th>
                 <th>操作</th>
             </tr>
@@ -76,18 +77,21 @@
                     <form action="${website}lunbo/update2/${lunbo.id}" method="post" enctype="multipart/form-data">
                         <input type="text" name="name" value="${lunbo.name}" hidden/>
                         <input type="text" name="path" value="${lunbo.path}" hidden/>
-                        <span class="status">${lunbo.status}</span>
-                        <input type="checkbox" class="choice" name="choose" />
+                        <%--<span class="status">${lunbo.status}</span>--%>
+                        <input type="checkbox" class="choice" name="choose" title="如要选中请点击该复选框，并点击确定按钮" />
                         <input type="hidden" name="status" class="hidden" value="0" />
                         <button type="submit" class="submitcheck">确定</button>
                     </form>
                 </td>
                 <td>
+                    <span class="status">${lunbo.status}</span>
+                </td>
+                <td>
                     <a href="${website}lunbo/toUpdate/${lunbo.id}">
-                        <img src="../../../../img/manager/lunbo/change.png" class="update" />
+                        <img src="../../../../img/manager/lunbo/change.jpg" class="update" />
                     </a>
                     <a href="${website}lunbo/del/${lunbo.id}">
-                        <img src="../../../../img/manager/lunbo/delete.png"  class="delete"/>
+                        <img src="../../../../img/manager/lunbo/delete.jpg"  class="delete"/>
                     </a>
                 </td>
             </tr>
