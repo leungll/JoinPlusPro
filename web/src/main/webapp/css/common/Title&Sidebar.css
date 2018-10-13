@@ -55,6 +55,10 @@ body{
     width: 200px;
     height: 100%;
     background-color: rgb(57,61,73);
+<<<<<<< Updated upstream
+=======
+    z-index: 1000;
+>>>>>>> Stashed changes
 }
 #sidebar ul li{
     color: white;
