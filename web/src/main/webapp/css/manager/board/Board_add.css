@@ -1,0 +1,53 @@
+.content{
+    padding-top: 50px;
+}
+input,textarea{
+    display: inline-block;
+    /*margin-bottom: 30px;*/
+}
+table{
+    text-align: left;
+    margin:0 auto;
+    /*vertical-align: middle;*/
+}
+table td{
+    /*border: 1px solid #FFFFFF;
+    background-color: #E4E4E4;*/
+    height: 50px;
+}
+table tr td:first{
+    width: 50px;
+}
+table tr td:nth-child(2){
+    width: 620px;
+}
+textarea{
+    height: 150px;
+    width: 500px;
+}
+button,#submit{
+    width: 100px;
+    height: 50px;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+/*验证表单错误提示*/
+.formtipsonError{
+    /*input改为inline-block之后，span可以在其后方显示*/
+    color: red;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.textareaonError{
+    color: red;
+    margin-left: 20px;
+    font-size: 13px;
+}
+#sidebar ul li:nth-child(3) a{
+    background-color: rgb(78,84,101);
+}

@@ -1,0 +1,92 @@
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+#acti_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#acti_title span{
+    font-size: 20px;
+}
+#activity{
+    position: relative;
+    width: 1300px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+    padding-bottom: 5%;
+
+}
+#sidebar ul li:nth-child(7) a{
+    background-color: rgb(78,84,101);
+}
+#activities_table tr{
+    transition: all 0.5s;
+}
+#activities_table tr th,td{
+    text-align: center;
+    border: 1px solid rgb(226,226,226);
+    z-index: 0;
+}
+#activities_table tr td:nth-child(2){
+    height: 250px;
+    text-align: center;
+}
+#activities_table tr td button{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#activities_table tr td button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+#tool{
+    position: absolute;
+    bottom: 0%;
+}
+#file_through{
+    display: none;
+}
+#activity button{
+    width: 130px;
+    height: 30px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#through{
+    margin-right: 10px;
+}
+#activity button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+#tool input{
+    width: 300px;
+    height: 30px;
+    border: 0.4px solid gray;
+    border-radius: 6px;
+    text-indent: 5px;
+}
+#add_tool{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

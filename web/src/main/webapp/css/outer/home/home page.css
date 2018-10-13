@@ -1,0 +1,147 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+#body{
+    margin: 0 auto;
+    width: 1366px;
+}
+.content{
+    padding:0 230px 20px 230px;
+}
+/*------公共部分--------*/
+.theme{
+    background-image: url(../../../img/outer/u47.jpg);
+    padding:14px 25px;
+}
+#title_mien > div:nth-child(1) > div:nth-child(1){
+    background-image: url(../../../img/outer/u145.jpg);
+    padding:14px;
+}
+.theme{
+    display: inline-block;
+}
+.more{
+    float:right;
+}
+.theme span{
+    font-size: 18px;
+    letter-spacing:2px;
+    font-weight: 300;
+}
+.more span{
+    font-weight: 300;
+    font-size:14px;
+    margin-right:7px;
+    vertical-align: middle;
+}
+.more img{
+    vertical-align: middle;
+}
+/*-----轮播------*/
+#title_carousel{
+    /*margin:0 5%;*/
+}
+/*-----公告------*/
+#title_announce{
+    margin:3% 0;
+}
+.level_detail{
+    margin:10px 8px;
+}
+.announce_detail{
+    display: inline-block;
+    margin:20px 78px;
+}
+.announce_detail{
+    vertical-align: middle;
+}
+.announce_detail > .annnounce_left{
+    width:36px ;
+    height:47px;
+    color:white;
+    padding:9px 2px;;
+    background-color:#259fc8;
+    font-size:30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.announce_detail > .annnounce_right{
+    width:34px ;
+    height:47px;
+    margin-left: -5px;
+    padding:8px 2px ;
+    border:1px solid #259fc8;
+    display:inline-block;
+    font-size:15px;
+    vertical-align: middle;
+    font-weight:500;
+    line-height:23px;
+}
+.announce_month{
+    color:#259fc8;
+}
+.announce_year{
+    color:darkgray;
+}
+.announce_detail span{
+    vertical-align: middle;
+    display: inline-block;
+    width: 164px;
+    word-wrap:break-word;
+    word-break:break-all;
+    margin-left:40px;
+}
+/*-----活动------*/
+#title_activities{
+    margin:3% 0;
+}
+#activities_detail img{
+    margin:30px 0;
+}
+#activities_detail > img:nth-child(3){
+    margin-left:530px;
+}
+#activities_words{
+    padding: 0 28%;
+}
+#activities_words > #word_h{
+    text-align: center;
+}
+#activities_words > #word_p{
+    margin-top:40px;
+    margin-bottom: 20px;
+    /*text*/
+}
+
+#activities_img img{
+    display:inline-block;
+    margin:20px 20px;
+    height:200px;
+    width:320px;
+}
+#activities_img{
+    margin:0px -100px 55px -100px;
+}
+
+/*---卓音风采----*/
+#title_mien{
+    margin:3% 0;
+}
+#title_mien > div:nth-child(2){
+    margin:20px -100px;
+}
+.mien_detail{
+    display: inline-block;
+    margin:30px 57px;
+}
+.mien_h{
+    color: white;
+    padding:7px 0;
+    text-align: center;
+    background-color:#169bd5;
+    border-radius:5px;
+    width: 150px;
+    height: 28px;
+    margin:10px 50px;
+}

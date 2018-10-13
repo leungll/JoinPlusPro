@@ -1,0 +1,14 @@
+#title{
+    display:inline-block;
+    font-size: 40px;
+    margin-left:10%;
+    vertical-align: bottom;
+}
+#passage{
+    margin:9% 10% 2% 10%;
+    line-height: 120%;
+    font-size: 20px;
+}
+.announce_a_content{
+    margin:5% 13%;
+}

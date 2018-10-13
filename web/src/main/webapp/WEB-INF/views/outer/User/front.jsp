@@ -17,8 +17,8 @@
 <body>
 <div class="header">
     <div class="logo">
-        <img src="../../../../img/common/1.png">
-        <img src="../../../../img/common/2.png">
+        <img src="../../../../img/common/1.jpg">
+        <img src="../../../../img/common/2.jpg">
     </div>
     <div class="button">
         <div class="button_inner" id="btn1">
@@ -91,7 +91,7 @@
 </div>
 <div class="footer_block">
     <div class="footer" id="footer_logo">
-        <img src="../../../../img/common/1.png">
+        <img src="../../../../img/common/1.jpg">
     </div>
     <div class="footer footer_middle" id="footer_message">
         <p><span>版权所有©东北师范大学卓音工作室</span></p>

@@ -1,0 +1,73 @@
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+#change_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#change_title span{
+    font-size: 20px;
+}
+#load_table{
+    position: relative;
+    width: 1300px;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+#simgle_photo tr th,td{
+    border: 1px solid rgb(226,226,226);
+    text-align: center;
+}
+#simgle_photo tr td:first-child input{
+    width: 90px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    color: black;
+    border: 0;
+}
+#simgle_photo tr td:nth-child(2) input{
+    width: 200px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    color: black;
+    border: 0;
+}
+#simgle_photo tr td button{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#simgle_photo tr td button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+div[id*=new_tool]{
+    margin-top: 3%;
+}
+div[id*=new_tool] input{
+    width: 155px;
+    height: 30px;
+    border: 0.4px solid gray;
+    border-radius: 6px;
+    text-indent: 5px;
+}
+#change_file{
+    display: none;
+}
+.choose{
+    width: 20px;
+    height: 20px;
+}

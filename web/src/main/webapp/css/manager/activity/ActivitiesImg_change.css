@@ -1,0 +1,58 @@
+a{
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+#change_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#change_title span{
+    font-size: 20px;
+}
+#load_table{
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 4%;
+}
+#simgle_photo tr th{
+    font-size: 120%;
+}
+#simgle_photo tr th,td{
+    border: 1px solid rgb(226,226,226);
+}
+#simgle_photo tr td:first-child input{
+    width: 300px;
+    height: 35px;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+    color: black;
+    border: 0;
+    font-size: 140%;
+}
+#simgle_photo tr td:nth-child(2){
+    width: 300px;
+    height: 250px;
+    text-align: center;
+}
+#simgle_photo tr td button{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#simgle_photo tr td button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
