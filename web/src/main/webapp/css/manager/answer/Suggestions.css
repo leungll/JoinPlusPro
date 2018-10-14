@@ -1,0 +1,71 @@
+a:hover{
+    text-decoration: none;
+}
+#sidebar ul li:nth-child(10) a{
+    background-color: rgb(78,84,101);
+}
+#Suggestions_title{
+    width: 700px;
+    border-bottom: 1px solid;
+    padding: 20px 0 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+#Suggestions_title span{
+    font-size: 20px;
+}
+#submit_suggestions{
+    width: 1200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+#Suggestions_form tr th,td{
+    height: 40px;
+    border: 1px solid rgb(226,226,226);
+    overflow: auto;
+    font-size: 130%;
+    text-align: center;
+    padding: 0 1% 0 1%;
+}
+#Suggestions_form tr td:first-child{
+    width: 60px;
+}
+#Suggestions_form tr td:nth-child(2){
+    width: 600px;
+}
+#Suggestions_form tr td:nth-child(3){
+    width: 600px;
+}
+#Suggestions_form tr td:last-child{
+    width: 200px;
+}
+button{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid rgb(35,38,46);
+    border-radius: 8px;
+    background-color: rgb(35,38,46);
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    transition: all 0.5s;
+}
+#Suggestions_form button:hover{
+    border: 1px solid rgb(74,80,80);
+    background-color: rgb(74,80,80);
+}
+#reply{
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+#reply table th{
+    width: 100px;
+}
+#tool{
+    position: absolute;
+    top: 103%;
+    right: 0;
+}

@@ -1,0 +1,472 @@
+/*头部*/
+.top{
+	background-color: lightgrey;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+}
+.top a{
+	display: inline-block;
+	margin: 0 10px;
+	color: #7EA6D7;
+	text-decoration: none;
+}
+.top .formbox{
+	width: 350px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 50px;
+}
+.formbox form{display: inline-block;}
+/*工作室图标部分，也是固定的*/
+.studio{
+	background-image: url(../img/toppic.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+}
+.studio p{
+	font-size: 20px;
+	margin-left: 30px;
+}
+/*-----------------------------------------------以下都是网页的主体部分----------------------------------------------------------*/ 
+.content{
+	margin-top: 110px;
+	width: 100%;
+}                                               
+/*通知栏的图标部分*/
+.notice_pic{
+	height: 50px;
+	background-color: rgb(245,245,245);
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+}
+.notice_a{
+	margin-left: 30px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+.notice_pic img{
+	width: 30px;height: 30px;
+	padding-left: 5.5%;
+}
+.notice_pic a{
+	color: #7EA6D7;
+	text-decoration: none;
+}
+.notice_a span{
+	margin: 0 10px
+}
+/*以下是PPT以及日历部分*/
+.ppt_and_calendar{
+	/*包裹ppt和日历的大盒子*/
+	width: 85%;
+	margin: 0 auto;
+	position: relative;
+}
+/*--------------------------------------------------------ppt-----------------------------------------*/
+#notice{
+	position: relative;
+	display: inline-block;
+	width: 560px;
+	padding: 2% 0 2% 0;
+	border: 1px solid rgb(253,253,253);
+	background-color: rgb(253,253,253);
+}
+#inside_table{
+	width: 560px;
+    height: 163px;
+	margin: 0 auto;
+}
+#inside_table tr td{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgb(253,253,253);
+}
+#inside_table img{
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+#bottom{
+	width: 375px;
+	margin: 0 auto;
+}
+#bottom button{
+	margin-right: 2%;
+}
+#padding{
+	width: 220px;
+	margin: 0 auto;
+	margin-bottom: 4%;
+}
+#padding td{
+	border: 1px solid;
+}
+#padding td input{
+	text-align: center;
+}
+#padding input{
+	width: 25px;
+	border-radius: 4px;
+	border: 1px solid
+}
+#bottom{
+	margin-top: 2%;
+}
+#bottom button{
+	width: 70px;
+	height: 30px;
+	border: 1px solid rgb(22,155,213);
+	border-radius: 6px;
+	background-color: rgb(22,155,213);
+	color: white;
+}
+/*#bottom button:hover{*/
+	/*background-color: ;*/
+/*}*/
+#address{
+	width: 200px;
+	height: 30px;
+	border: 1px solid rgb(214,214,214);
+	border-radius: 8px;
+	background-color: rgb(249,249,249);
+	text-indent: 3%;
+}
+#file{
+	display: none;
+}
+/*---------------------------------------------------日历-----------------------------------------------*/
+.calendar{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    clear: both;
+    -ms-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+.calendar span{                            
+	margin-left: 68px;
+}
+.calendar td,th{
+	width: 35px;height: 30px;
+	text-align: center;
+}
+.calendar .tooltip{
+	position: absolute;
+	z-index: 999;
+}
+/*项目图标*/
+.project_pic{
+	height: 50px;
+	background-color: rgb(245,245,245);
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+}
+.project_a{
+	margin-left: 30px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+.project_pic img{
+	width: 30px;height: 30px;
+	padding-left: 5.5%;
+	}
+.project_pic a{
+	color: #7EA6D7;
+	text-decoration: none;
+}
+.project_a span{
+	margin: 0 10px
+}
+/*项目以及Project Management部分*/
+.project{                                   /*工作室项目*/
+	width: 85%;
+	height: 310px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#projectpic{
+	width: 200px;
+	height: 200px;
+}
+.hidden{
+	width: 40%;
+	height: 300px;
+	overflow: hidden;
+	position: absolute;
+	top:0 ;
+	left: 0;
+}
+.project_child{
+	/*设置子元素宽度略小于父元素宽度*/
+	width: 103.2%;                              
+	height: 300px;
+	overflow-y: scroll;
+	overflow-x:hidden ;
+	display: inline-block;
+	/*position: absolute;
+	top:0 ;
+	left: 0;*/
+}
+#add_btn{
+	width: 100px;
+	height: 40px;
+	background-color: rgb(22,155,213);
+	border: 1px solid rgb(22,155,213);
+	border-radius: 6px;
+	color: white;
+	float: right;
+}
+.project_child table img{             /*工作室项目的小图片*/
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	opacity: 0.5;
+}
+.project td{
+	/*border: 1px solid #000000;*/
+	text-align: center;
+	height: 60px;
+}
+.project tr td:nth-child(1){
+	width: 60px;
+}
+.project tr td:nth-child(2){
+	width: 150px;
+}
+.project tr td:nth-child(3){
+	width: 80px;
+}
+.project tr td:nth-child(4){
+	width: 100px;
+}
+#projectpic{                                  /*project management的大图片*/
+	width: 300px;height: 300px;
+	float: right;
+	transition: all 3s ease-in-out;
+}
+.logchange{
+	transform: rotateY(360deg);
+}
+/*-----------------------------------------------------------以上都是网页的主体部份------------------------------*/
+/*-----------------------------------------------------------你问我答----------------------------------------*/
+#suggestion{
+	width: 100%;
+}
+#sug_title{
+	padding-left: 5.5%;
+	height: 50px;
+	line-height: 50px;
+	background-color: rgb(245,245,245);
+}
+#sug_title img{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 5.5%;
+}
+#sug_title span{
+	padding-left: 60px;
+	color: #7EA6D7;
+}
+#question{
+	position: relative;
+	margin: 0 auto;
+	width: 85%;
+}
+#question div{
+	display: inline-block;
+}
+#question textarea{
+	width: 300px;
+	height: 130px;
+	margin-top: 1.3%;
+	padding: 1%;
+	background-color: rgb(250,250,250);
+	border: 0.5px solid rgb(220,220,220);
+	/*禁止拉伸*/
+	resize: none;
+}
+#question_one{
+	position: relative;
+	width:580px;
+	background-color: rgb(250,250,250);
+	border: 1px solid rgb(250,250,250);
+}
+#operate_tool{
+	width: 100px;
+	position: absolute;
+	bottom: 3%;
+	right: 6%;
+}
+#operate_tool button{
+	width: 100px;
+	height: 32px;
+	margin-top: 13%;
+	display: block;
+	background-color: rgb(22,155,213);
+	border: 1px solid rgb(22,155,213);
+	border-radius: 6px;
+	color: white;
+}
+#suggestion span{
+	color: rgb(0,102,255);
+}
+#submit_suggestions{
+	margin-top: 3%;
+	height: 360px;
+	position: absolute;
+	right: 0;
+	overflow: auto;
+}
+#Suggestions_form{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#Suggestions_form tr:nth-child(odd){
+	background-color: rgb(242,242,242);
+}
+#Suggestions_form tr th{
+	width: 350px;
+	height: 20px;
+	overflow: auto;
+	text-align: center;
+	border: 1px solid rgb(226,226,226);
+	padding: 1% 1% 1% 1%;
+}
+#Suggestions_form tr td{
+	width: 350px;
+	height: 20px;
+	overflow: auto;
+	text-align: center;
+	border: 1px solid rgb(226,226,226);
+	padding: 1% 1% 1% 1%;
+}
+/*-----------------------------------------------------------尾部--------------------------------------------*/
+.footer{
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	background-color: lightgrey;
+	color: #000000;
+	text-align: center;
+}
+/*--------------------------------------------------------项目增加部分------------------------------------------------------------------*/
+.addcontent{
+	width: 400px;
+	height: 300px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	/*box-shadow:2px 2px 2px 2px #000000;*/
+	border-radius: 20px;
+	display: none;
+	margin: 5px 0;
+}
+.show{
+	position: relative;
+	left: 550px;
+}
+.addcontent table{
+	text-align: center;
+}
+.addcontent table tr td{
+	/*border: 1px solid #000000;*/
+	height: 45px;
+}
+.addcontent table tr td:first-child{
+	width: 100px;
+}
+.addcontent table tr td:nth-child(2){
+	width: 200px;
+}
+.addcontent table tr td:nth-child(3){
+	font-size: 10px;                                 
+}
+.addcontent table tr textarea{
+	width: 210px;
+	height: 100px;
+	resize: none;
+}
+.addcontent table tr td input{
+	height: 30px;
+	width:200px ;
+	/*border-radius: 20px;*/
+	border: 1px solid #000000;
+	padding-left: 10px;
+}
+.addcontent table tr:last-child td button,#addsubmit{
+	height: 40px;
+	width: 80px;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	margin-top: 10px;
+	padding-left: 0;
+}
+/*----------------------------------------------------------------------项目修改部分-----------------------------------------------------*/
+.updatecontent{
+	width: 400px;
+	height: 300px;
+	background-color: #FFFFFF;
+	border: 1px solid #000000;
+	/*box-shadow:2px 2px 2px 2px #000000;*/
+	border-radius: 20px;
+	display: none;
+	margin: 5px 0;
+}
+.updatecontent table{
+	text-align: center;
+}
+.updatecontent table tr td{
+	height: 45px;
+}
+.updatecontent table tr td:first-child{
+	width: 100px;
+}
+.updatecontent table tr td:nth-child(2){
+	width: 200px;
+}
+.updatecontent table tr td:nth-child(3){
+	font-size: 10px;
+}
+.updatecontent table tr textarea{
+	width: 200px;
+	height: 100px;
+	resize: none;
+}
+.updatecontent table tr td input{
+	height: 30px;
+	width:200px ;
+	/*border-radius: 20px;*/
+	border: 1px solid #000000;
+	padding-left: 10px;
+}
+.updatecontent table tr:last-child td button,#addsubmit{
+	height: 40px;
+	width: 80px;
+	border: 1px solid #000000;
+	border-radius: 20px;
+	margin-top: 10px;
+	padding-left: 0;
+}

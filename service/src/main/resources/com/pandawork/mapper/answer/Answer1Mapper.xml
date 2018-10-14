@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.answer.Answer1Mapper">
+
+    <resultMap id="answer1" type="com.pandawork.common.entity.answer.Answer1" >
+        <id property="id" column="id"/>
+        <result property="inquiry_answer1" column="inquiry_answer1"/>
+    </resultMap>
+
+    <select id="listAllAnswer1" resultMap="answer1">
+        SELECT *
+        FROM `t_inquiry_in`
+    </select>
+
+    <insert id="addAnswer1">
+        INSERT INTO `t_inquiry_in`
+        (`inquiry_answer1`)
+        VALUES (#{answer1.inquiry_answer1})
+    </insert>
+
+    <delete id="delAnswer1">
+        DELETE FROM `t_inquiry_in`
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateAnswer1">
+        UPDATE `t_inquiry_in`
+        SET `inquiry_answer1` = #{answer1.inquiry_answer1}
+        WHERE `id` = #{answer1.id}
+    </update>
+
+    <select id="selectById" resultMap="answer1" >
+        SELECT *
+        FROM `t_inquiry_in`
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="select" resultMap="answer1">
+        SELECT *
+        FROM `t_inquiry_in`
+        WHERE `inquiry_answer1` LIKE '%${keyword}%'
+        OR `id` LIKE '%${keyword}%'
+    </select>
+</mapper>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.project.ProjectMapper">
+
+    <resultMap id="project" type="com.pandawork.common.entity.project.Project" >
+        <id property="id" column="id"/>
+        <result property="project_name" column="project_name"/>
+        <result property="project_date" column="project_date"/>
+        <result property="project_finish" column="project_finish"/>
+        <result property="project_content" column="project_content"/>
+    </resultMap>
+
+    <select id="listAllProject" resultMap="project">
+        SELECT *
+        FROM `t_project_in`
+    </select>
+
+    <insert id="addProject">
+        INSERT INTO `t_project_in`
+        (`project_name`,`project_date`,`project_finish` , `project_content`)
+        VALUES (#{project.project_name}, #{project.project_date}, #{project.project_finish}, #{project.project_content})
+    </insert>
+
+    <delete id="delProject">
+        DELETE FROM `t_project_in`
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateProject">
+        UPDATE `t_project_in`
+        SET `project_name` = #{project.project_name} ,
+            `project_date` = #{project.project_date},
+            `project_finish` = #{project.project_finish},
+            `project_content`=#{project.project_content}
+        WHERE `id` = #{project.id}
+    </update>
+
+    <select id="selectById" resultMap="project" >
+        SELECT *
+        FROM `t_project_in`
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="select" resultMap="project">
+        SELECT *
+        FROM `t_project_in`
+        WHERE `project_name` LIKE '%${keyword}%'
+    </select>
+</mapper>

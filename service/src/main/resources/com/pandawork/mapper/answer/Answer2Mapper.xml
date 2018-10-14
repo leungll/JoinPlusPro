@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.answer.Answer2Mapper">
+
+    <resultMap id="answer2" type="com.pandawork.common.entity.answer.Answer2" >
+        <id property="id" column="id"/>
+        <result property="inquiry_answer2" column="inquiry_answer2"/>
+        <result property="inquiry_answer1" column="inquiry_answer1"/>
+    </resultMap>
+
+    <select id="listAllAnswer2" resultMap="answer2">
+        SELECT *
+        FROM `t_inquiry_in`
+    </select>
+
+    <insert id="addAnswer2">
+        INSERT INTO `t_inquiry_in`
+        (`inquiry_answer2`,`inquiry_answer1`)
+        VALUES (#{answer2.inquiry_answer2}, #{answer2.inquiry_answer1})
+    </insert>
+
+    <delete id="delAnswer2">
+        DELETE FROM `t_inquiry_in`
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="updateAnswer2">
+        UPDATE `t_inquiry_in`
+        SET `inquiry_answer2` = #{answer2.inquiry_answer2},
+            `inquiry_answer1` = #{answer2.inquiry_answer1}
+        WHERE `id` = #{answer2.id}
+    </update>
+
+    <select id="selectById" resultMap="answer2" >
+        SELECT *
+        FROM `t_inquiry_in`
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="select" resultMap="answer2">
+        SELECT *
+        FROM `t_inquiry_in`
+        WHERE `inquiry_answer2` LIKE '%${keyword}%'
+        OR `id` LIKE '%${keyword}%'
+    </select>
+</mapper>
