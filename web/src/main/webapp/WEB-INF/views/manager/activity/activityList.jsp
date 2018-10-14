@@ -52,7 +52,7 @@
         <li><a href="${website}activity/list">活动管理</a></li>
         <li><a href="${website}beauty/list">风采图片管理</a></li>
         <li><a href="${website}entry/listAll">报名人员管理</a></li>
-        <li><a href="${website}answer2/list">提交意见查看</a></li>
+        <li><a href="${website}answer2/list1">提交意见查看</a></li>
     </ul>
 </div>
 <div id="acti_title">

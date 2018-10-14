@@ -123,6 +123,7 @@ public class LunboController extends AbstractController {
             return ADMIN_SYS_ERR_PAGE;
         }
     }
+
     @RequestMapping(value = "/update2/{id}",method = RequestMethod.POST)
     public String update2(Lunbo lunbo , @PathVariable("id")int id, Model model, @RequestParam("status") String status){
         try{
