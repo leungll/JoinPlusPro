@@ -162,20 +162,20 @@ public class ActivityController extends AbstractController {
     }
     @RequestMapping(value="/update/{id}", method = RequestMethod.POST)
     public String updateActivity(@RequestParam("state")String state,@PathVariable("id") int id,Activity activity, HttpSession session, MultipartFile uploadFile1,MultipartFile uploadFile2,MultipartFile uploadFile3, Model model) throws SSException {
-        Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
-        String date1 = sdf.format(date);
-
-        String filename1 = date1+uploadFile1.getOriginalFilename();
-        String filename2 = date1+uploadFile2.getOriginalFilename();
-        String filename3 = date1+uploadFile3.getOriginalFilename();
-        String leftPath = session.getServletContext().getRealPath("images");
-        File file1 = new File(leftPath,filename1);
-        File file2 = new File(leftPath,filename2);
-        File file3 = new File(leftPath,filename3);
-        activity.setImage1("/images/"+filename1);
-        activity.setImage2("/images/"+filename2);
-        activity.setImage3("/images/"+filename3);
+//        Date date = new Date();
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddhhmmss");
+//        String date1 = sdf.format(date);
+//
+//        String filename1 = date1+uploadFile1.getOriginalFilename();
+//        String filename2 = date1+uploadFile2.getOriginalFilename();
+//        String filename3 = date1+uploadFile3.getOriginalFilename();
+//        String leftPath = session.getServletContext().getRealPath("images");
+//        File file1 = new File(leftPath,filename1);
+//        File file2 = new File(leftPath,filename2);
+//        File file3 = new File(leftPath,filename3);
+//        activity.setImage1("/images/"+filename1);
+//        activity.setImage2("/images/"+filename2);
+//        activity.setImage3("/images/"+filename3);
         try {
             String stt = new String();
             System.out.println(state);
@@ -187,18 +187,19 @@ public class ActivityController extends AbstractController {
                 stt = "不是0和1";
             }
             activity.setState(stt);
-            uploadFile1.transferTo(file1);
-            uploadFile2.transferTo(file2);
-            uploadFile3.transferTo(file3);
+//            uploadFile1.transferTo(file1);
+//            uploadFile2.transferTo(file2);
+//            uploadFile3.transferTo(file3);
         }
         catch (Exception e){
             System.out.println("文件保存出错");
             e.printStackTrace();
         }
         activityService.update(activity);
-        model.addAttribute("image1",activity.getImage1());
-        model.addAttribute("image2",activity.getImage2());
-        model.addAttribute("image3",activity.getImage3());
+//        model.addAttribute("image1",activity.getImage1());
+//        model.addAttribute("image2",activity.getImage2());
+//        model.addAttribute("image3",activity.getImage3());
+        model.addAttribute("activity",activity);
         return "redirect:/activity/list";
     }
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)

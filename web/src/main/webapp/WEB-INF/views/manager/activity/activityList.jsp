@@ -15,7 +15,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../../../css/base/reset.css" />
     <link rel="stylesheet" type="text/css" href="../../../../css/common/Title&Sidebar.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../css/manager/activity/Activities.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../css/manager/activity/activities.css" />
     <script type="text/javascript" src="../../../../js/common/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../../../../js/common/Title&Sidebar.js"></script>
     <script type="text/javascript" src="../../../../js/manager/activity/Activitiy.js"></script>
@@ -61,9 +61,9 @@
 <div id="activity">
     <table id="activities_table">
         <tr>
-            <th style="width: 300px;">序号</th>
+            <th style="width: 100px;">序号</th>
             <th style="width: 300px;">标题</th>
-            <th style="width: 300px;">内容</th>
+            <th style="width: 400px;">内容</th>
             <th style="width: 300px;">图片1</th>
             <th style="width: 300px;">图片2</th>
             <th style="width: 300px;">图片3</th>

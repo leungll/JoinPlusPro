@@ -15,7 +15,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../../../css/base/reset.css" />
     <link rel="stylesheet" type="text/css" href="../../../../css/common/Title&Sidebar.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../css/manager/activity/Activities.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../css/manager/activity/Activities.activities.css" />
     <script type="text/javascript" src="../../../../js/common/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../../../../js/common/Title&Sidebar.js"></script>
     <script type="text/javascript" src="../../../../js/manager/activity/Activitiy.js"></script>

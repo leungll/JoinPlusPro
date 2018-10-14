@@ -6,6 +6,8 @@
 .content{
     /*通过padding来定位*/
     padding-top: 50px;
+    width: 600px;
+    border: 1px solid red;
 }
 table{
     margin: 0 auto;
