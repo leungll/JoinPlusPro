@@ -33,6 +33,8 @@
     <span style="color: #000000;">|</span>
     <a href="#">工作室内网</a>
     <div class="formbox">
+        <c:set var="power" value="${power}"/>
+        <c:if test="${power==1}"><a href="/lunbo/list"><input type="button" value="管理Join"></a></c:if>
         <form action="#" method="post">
             <input type="button" name="logout" value="退出登录" />
         </form>
@@ -63,20 +65,20 @@
         <div id="notice">
             <div id="inside_table">
                 <table>
-                    <tr>
-                        <!-- 数据库中存放图片 -->
-                        <td><img src="../../../img/inner/message.jpg" /></td>
-                        <!-- 数据库中存放文档标题 -->
-                        <td></td>
-                        <!-- 数据库中存放上传文档的日期 -->
-                        <td></td>
-                    </tr>
+                    <c:forEach items="${list}" var="tg">
+                        <tr>
+                            <!-- 数据库中存放图片 -->
+                            <td><img src="img/message.png" /></td>
+                            <td><a href="/TongGao/downLoad?filename=${tg.file}">${tg.title}</a></td>
+                            <td>${tg.date}</td>
+                        </tr>
+                    </c:forEach>
                 </table>
             </div>
             <div id="bottom">
-                <form action="StuNotice.html" method="post">
+                <form action="/TongGao/add" method="post" enctype="multipart/form-data">
                     <input type="text" name="address" id="address" />
-                    <input type="file" name="file" id="file" /><!-- 用#browse按钮代替#file<input> -->
+                    <input type="file" name="uploadFile" id="file" /><!-- 用#browse按钮代替#file<input> -->
                     <button type="button" name="browse" id="browse">浏览</button>
                     <button type="submite" name="submite" id="submite">上传</button>
                 </form>
@@ -96,58 +98,58 @@
                     <th>Sat</th>
                 </tr>
                 <tr>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title="aaa"></td>
-                    <td title=""></td>
-                    <td title="aaa"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
                 </tr>
                 <tr>
-                    <td title="aaa"></td>
-                    <td title="aaa"></td>
-                    <td title="aaa"></td>
-                    <td title="aaa"></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
                 </tr>
                 <tr>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
                 </tr>
                 <tr>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
                 </tr>
                 <tr>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
                 </tr>
                 <tr>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
-                    <td title=""></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
+                    <td title=""  class="date"></td>
                 </tr>
             </table>
         </div>

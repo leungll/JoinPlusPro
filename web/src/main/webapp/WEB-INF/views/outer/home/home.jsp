@@ -30,7 +30,7 @@
         </div>
         <div class="button">
             <div class="button_inner" id="btn1">
-                <button id="network" type="button">内网</button>
+                <a href="/user/home"><button id="network" type="button">内网</button></a>
             </div>
             <form class="button_inner" action="${website}/board/query">
                 <table >

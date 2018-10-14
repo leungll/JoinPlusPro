@@ -49,7 +49,7 @@
         <li><a href="${website}board/list">公告管理</a></li>
         <li><a href="${website}user/list">部门成员管理</a></li>
         <li><a href="">日历管理</a></li>
-        <li><a href="lessonFiles.html">课件管理</a></li>
+        <li><a href="${website}TongGao/getall1">课件管理</a></li>
         <li><a href="${website}activity/list">活动管理</a></li>
         <li><a href="${website}beauty/list">风采图片管理</a></li>
         <li><a href="${website}entry/listAll">报名人员管理</a></li>

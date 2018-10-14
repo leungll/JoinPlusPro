@@ -73,13 +73,12 @@
 .ppt_and_calendar{
 	/*包裹ppt和日历的大盒子*/
 	width: 85%;
+	height: 200px;
 	margin: 0 auto;
-	position: relative;
 }
 /*--------------------------------------------------------ppt-----------------------------------------*/
 #notice{
-	position: relative;
-	display: inline-block;
+	float: left;
 	width: 560px;
 	padding: 2% 0 2% 0;
 	border: 1px solid rgb(253,253,253);
@@ -87,7 +86,8 @@
 }
 #inside_table{
 	width: 560px;
-    height: 163px;
+	height: 163px;
+	overflow: auto;
 	margin: 0 auto;
 }
 #inside_table tr td{
@@ -135,9 +135,6 @@
 	background-color: rgb(22,155,213);
 	color: white;
 }
-/*#bottom button:hover{*/
-	/*background-color: ;*/
-/*}*/
 #address{
 	width: 200px;
 	height: 30px;
@@ -151,16 +148,17 @@
 }
 /*---------------------------------------------------日历-----------------------------------------------*/
 .calendar{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    clear: both;
-    -ms-transform: translate(0,-50%);
-    -moz-transform: translate(0,-50%);
-    -o-transform: translate(0,-50%);
-    transform: translate(0,-50%);
+	/*position: relative;*/
+	/*top: 50%;*/
+	/*right: 0;*/
+	/*clear: both;*/
+	/*-ms-transform: translate(0,-50%);*/
+	/*-moz-transform: translate(0,-50%);*/
+	/*-o-transform: translate(0,-50%);*/
+	/*transform: translate(0,-50%);*/
+	margin: 0 0 0 78%;
 }
-.calendar span{                            
+.calendar span{
 	margin-left: 68px;
 }
 .calendar td,th{
@@ -169,7 +167,7 @@
 }
 .calendar .tooltip{
 	position: absolute;
-	z-index: 999;
+	font-size: 10px;
 }
 /*项目图标*/
 .project_pic{

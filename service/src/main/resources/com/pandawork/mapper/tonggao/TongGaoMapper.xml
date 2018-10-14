@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pandawork.mapper.tonggao.TongGaoMapper">
+
+    <resultMap id="tonggao" type="com.pandawork.common.entity.tonggao.TongGao" >
+        <id property="id" column="id"/>
+        <result property="title" column="tg_title"/>
+        <result property="file" column="tg_file"/>
+        <result property="date" column="tg_date"/>
+    </resultMap>
+
+    <select id="GetAllTonggao" resultMap="tonggao">
+        SELECT *
+        FROM t_tonggao_beta
+    </select>
+
+    <insert id="addTongGao">
+          INSERT INTO t_tonggao_beta(tg_title,tg_file,tg_date,tg_dateshow)
+          VALUES (#{tg.title},#{tg.file},#{tg.date},#{tg.dateshow})
+    </insert>
+
+    <select id="downLoad" resultMap="tonggao">
+        SELECT *
+        FROM t_tonggao_beta
+        where id=#{id}
+    </select>
+
+    <delete id="delTongGao">
+        DELETE from t_tonggao_beta where id = #{id}
+    </delete>
+
+    <select id="findTongGao" resultMap="tonggao">
+        SELECT *
+        FROM t_tonggao_beta
+        WHERE tg_date = #{date}
+    </select>
+</mapper>
